@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan MUBES AREMA NTT 2026</title>
+  <!-- Google Fonts: Nuansa Elegan & Klasik -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-dark: #0a1128;
+      --blue-primary: #001f54;
+      --blue-accent: #034078;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --text-light: #f8f9fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      line-height: 1.6;
+      background-image: radial-gradient(circle at center, #034078 0%, #0a1128 100%);
+    }
+
+    /* Container HP */
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: rgba(10, 17, 40, 0.95);
+      border-left: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      min-height: 100vh;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    /* Header & Cover */
+    .cover {
+      padding: 40px 20px 20px;
+      border-bottom: 2px dashed var(--gold);
+      background: linear-gradient(180deg, rgba(0,31,84,0.8) 0%, rgba(10,17,40,0.9) 100%);
+    }
+
+    .jawa-ornament {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+      background: #000;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .slogan {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    /* Section Global */
+    section {
+      padding: 30px 20px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 2px;
+      background: var(--gold);
+      margin: 5px auto 0;
+    }
+
+    /* Countdown */
+    .timer-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .timer-box {
+      background: rgba(3, 64, 120, 0.6);
+      border: 1px solid var(--gold);
+      padding: 10px;
+      border-radius: 8px;
+      min-width: 65px;
+    }
+
+    .timer-box span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--gold-light);
+    }
+
+    .timer-box small {
+      font-size: 0.7rem;
+      color: #ccc;
+    }
+
+    /* Susunan Acara */
+    .schedule-item {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 10px 0;
+      padding: 12px;
+      border-left: 3px solid var(--gold);
+      text-align: left;
+      border-radius: 4px;
+    }
+
+    .schedule-time {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* Button Style */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, var(--gold), #b8860b);
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Music Player Floating */
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--gold);
+      color: #000;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+      z-index: 1000;
+    }
+
+    /* Form RSVP */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid var(--gold);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pemutar Musik Instrument Jawa -->
+  <div class="music-control" onclick="toggleMusic()">
+    <i id="music-icon" class="fas fa-music"></i>
+  </div>
+  
+  <!-- Audio Alunan Musik Gamelan Jawa -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    
+    <!-- Header / Cover -->
+    <div class="cover">
+      <div class="jawa-ornament">꧁ ꦱꦭꦩ꧀ꦱꦠꦸꦗꦶꦮ ꧂</div>
+      <p class="slogan">SALAM SATU JIWA</p>
+      
+      <!-- Foto Logo Singa -->
+      <div class="logo-container">
+        <img src="logo1.jpg" alt="Ikatan Arema Ongis Nade NTT" class="logo-img">
+        <img src="logo2.jpg" alt="Mubes Arema 2026" class="logo-img">
+      </div>
+
+      <h1>MUBES AREMA NTT</h1>
+      <p style="color: #ddd; margin-top: 5px;">Musyawarah Besar Ikatan Arema Ongis Nade Nusa Tenggara Timur</p>
+    </div>
+
+    <!-- Waktu & Countdown -->
+    <section>
+      <h2 class="section-title">WAKTU & TANGGAL</h2>
+      <p style="font-size: 1.2rem; font-weight: bold; color: var(--gold-light);">Rabu, 23 Desember 2026</p>
+      <p>Pukul 09.00 WITA - Selesai</p>
+
+      <div class="timer-container" id="countdown">
+        <div class="timer-box"><span id="days">0</span><small>Hari</small></div>
+        <div class="timer-box"><span id="hours">0</span><small>Jam</small></div>
+        <div class="timer-box"><span id="minutes">0</span><small>Menit</small></div>
+        <div class="timer-box"><span id="seconds">0</span><small>Detik</small></div>
+      </div>
+    </section>
+
+    <!-- Lokasi -->
+    <section>
+      <h2 class="section-title">LOKASI ACARA</h2>
+      <p><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>Gedung Serbaguna</strong></p>
+      <p style="font-size: 0.9rem; color: #ccc;">Nusa Tenggara Timur</p>
+      
+      <a href="https://maps.google.com" target="_blank" class="btn">
+        <i class="fas fa-map-marked-alt"></i> Buka Google Maps
+      </a>
+    </section>
+
+    <!-- Susunan Acara -->
+    <section>
+      <h2 class="section-title">SUSUNAN ACARA</h2>
+      <div class="schedule-item">
+        <div class="schedule-time">09.00 - 09.30 WITA</div>
+        <div>Registrasi Peserta & Pembukaan Acara</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">09.30 - 12.00 WITA</div>
+        <div>Sidang Pleno & Musyawarah Besar AREMA NTT</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">12.00 - 13.00 WITA</div>
+        <div>Istirahat & Ramah Tamah</div>
+      </div>
+      <div class="schedule-item">
+        <div class="schedule-time">13.00 - Selesai</div>
+        <div>Penutupan & Foto Bersama</div>
+      </div>
+    </section>
+
+    <!-- RSVP WhatsApp -->
+    <section>
+      <h2 class="section-title">KONFIRMASI KEHADIRAN (RSVP)</h2>
+      <p style="font-size: 0.9rem; margin-bottom: 10px;">Harap konfirmasi kehadiran dulur-dulur Arema sekalian:</p>
+      
+      <form id="rsvpForm" onsubmit="sendRSVP(event)">
+        <input type="text" id="nama" placeholder="Nama Lengkap / Perwakilan" required>
+        <select id="status" required>
+          <option value="">-- Konfirmasi Kehadiran --</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Ragu-ragu">Ragu-ragu</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <input type="number" id="jumlah" placeholder="Jumlah Rombongan (Orang)" min="1" value="1" required>
+        <button type="submit" class="btn"><i class="fab fa-whatsapp"></i> Kirim RSVP via WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- Dokumentasi -->
+    <section>
+      <h2 class="section-title">DOKUMENTASI</h2>
+      <p style="font-size: 0.85rem; color: #aaa;">Salam Satu Jiwa! Kumpulan momen dan kegiatan Perkumpulan Arema NTT.</p>
+    </section>
+
+    <footer>
+      <p>MUBES AREMA NTT 2026</p>
+      <p style="color: var(--gold); font-weight: bold;">SASAJI - SALAM SATU JIWA</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Countdown Timer
+    const eventDate = new Date("Dec 23, 2026 09:00:00").getTime();
+    setInterval(function() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance > 0) {
+        document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+      }
+    }, 1000);
+
+    // Music Player Control
+    const audio = document.getElementById("bg-music");
+    const musicIcon = document.getElementById("music-icon");
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        audio.pause();
+        musicIcon.className = "fas fa-music";
+      } else {
+        audio.play();
+        musicIcon.className = "fas fa-pause";
+      }
+      isPlaying = !isPlaying;
+    }
+
+    // Putar musik otomatis saat pengguna mengetuk layar pertama kali
+    document.body.addEventListener('click', function() {
+      if (!isPlaying) {
+        audio.play().then(() => {
+          isPlaying = true;
+          musicIcon.className = "fas fa-pause";
+        }).catch(err => console.log(err));
+      }
+    }, { once: true });
+
+    // RSVP Function WhatsApp (Ganti nomor WA di bawah ini)
+    function sendRSVP(e) {
+      e.preventDefault();
+      const nomorWA = "085815741371"; // Ganti dengan nomor WA panitia
+      const nama = document.getElementById("nama").value;
+      const status = document.getElementById("status").value;
+      const jumlah = document.getElementById("jumlah").value;
+
+      const pesan = `Halo Panitia MUBES AREMA NTT,%0ANama: ${nama}%0AKonfirmasi: ${status}%0AJumlah Rombongan: ${jumlah} orang.%0ATerima Kasih!`;
+      window.open(`https://wa.me/${nomorWA}?text=${pesan}`, '_blank');
+    }
+  </script>
+</body>
+</html>
